@@ -20,8 +20,10 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link" href="https://anthonyrivera3.github.io/lab3/Finalproject.html">Home</a>
-                <a class="nav-item nav-link" href="https://anthonyrivera3.github.io/lab3/finalhistory.html">History Calculator</a>
-                <a class="nav-item nav-link" href="https://anthonyrivera3.github.io/lab3/Documentationfinal.html">Documentaion</a>
+                <a class="nav-item nav-link" href="https://anthonyrivera3.github.io/lab3/finalhistory.html">History
+                    Calculator</a>
+                <a class="nav-item nav-link"
+                    href="https://anthonyrivera3.github.io/lab3/Documentationfinal.html">Documentaion</a>
             </div>
         </div>
     </nav>
@@ -35,21 +37,26 @@
 
     <script>
         // Fetch current rates
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('https://v6.exchangerate-api.com/v6/a5b67ad6f55df4c2f3afcfeb/latest/USD')
-                .then(response => response.json())
-                .then(data => {
-                    const rates = data.conversion_rates;
-                    const ratesDiv = document.getElementById('rates');
-                    Object.keys(rates).forEach(key => {
-                        ratesDiv.innerHTML += `${key}: ${rates[key]} <br>`;
-                    });
-                })
-                .catch(error => console.error('Error fetching data: ', error));
-        });
+
+        async function fetchHistory() {
+
+            try {
+                const response = await fetch('https://v6.exchangerate-api.com/v6/a5b67ad6f55df4c2f3afcfeb/latest/USD');
+                currency = await response.json();
+                console.log(currency);
+
+
+            }
+
+            catch (error) {
+                console.error('Error fetching currencys:', error);
+            };
+
+        };
+
 
         // Fetch historical rates
-        function fetchHistory() {
+        async function fetchHistory() {
             const date = document.getElementById('datePicker').value;
             const url = `https://v6.exchangerate-api.com/v6/a5b67ad6f55df4c2f3afcfeb/history/USD/${date}`;
             fetch(url)
@@ -66,5 +73,5 @@
         }
     </script>
 </body>
-</html>
 
+</html>

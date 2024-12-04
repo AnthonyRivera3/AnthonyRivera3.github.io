@@ -33,10 +33,212 @@
         
         <p>
 
+            -Authorization
+            To access the API key, you must become a member or use the free trial of exchange rate API.
+            You can use the trial or get the membership. You will then go to the settings to locate your 
+            specific key. If the key gets compromised there is an option under the API Keys section to delete 
+            the key and create a new one. 
+            API Key: 
+            Key=<a5b67ad6f55df4c2f3afcfeb>
+            The Rate Limiting for the API is set to 30,000 requests per month 
+
+
+         <br>
+
+        <br>
 
 
 
-            Hello
+            -Endpoints
+            The API has a total of two endpoints. The two endpoints are from the historical data section. One 
+            of them allows the user to fetch any information about the currency conversions from any day of 
+            the year on any year. For example, it could show the currency in Japan today and from 1997 and 
+            show the conversion rates between other countries for any day for the year. The second endpoint 
+            for the historical data section is meant to return specific amounts of currency results. You put in 
+            the exact amount of currency, and you get a result of what that is worth globally. For the 
+            historical data sections parameters are USD, YEAR, MONTH, DAY, AMOUNT. 
+            
+            
+            
+
+        <br>
+
+        <br>
+        <br>
+            
+            
+            -Samples: 
+            Endpoint 2 –(Historical Data Section)
+            Sample request:
+            https://v6.exchangerate-api.com/v6/a5b67ad6f55df4c2f3afcfeb/history/USD/1997/11/2/125
+            Sample response:
+            {
+             "result": "success",
+             "documentation": "https://www.exchangerate-api.com/docs",
+             "terms_of_use": "https://www.exchangerate-api.com/terms",
+             "year": 1997,
+             "month": 11,
+             "day": 2,
+             "base_code": "USD",
+             "requested_amount": 125,
+             "conversion_amounts": {
+             
+            "ATS": 88.625,
+             
+            "AUD": 176.3047,
+             
+            "BEF": 4465,
+             
+            "BRL": 137.8462,
+             
+            "CAD": 176.6625,
+             
+            "CHF": 176.0962,
+             
+            "CNY": 1039.2387,
+             
+            "DEM": 216.525,
+             
+            "DKK": 823.8,
+             
+            "ESP": 18296.6675,
+             
+            "FIM": 650.5338,
+             
+            "FRF": 724.6675,
+             
+            "GBP": 74.3645,
+             
+            "GRD": 34150.0013,
+             
+            "HKD": 966.7088,
+             
+            "IEP": 82.4212,
+             
+            "IRR": 4550,
+             
+            "ITL": 212233.3338,
+             
+            "JPY": 15102.9175,
+             
+            "KRW": 121750,
+             
+            "LKR": 7481.6675,
+             
+            "MXN": 1073.75,
+             
+            "MYR": 427,
+             
+            "NLG": 244.0625,
+             
+            "NOK": 879.9088,
+             
+            "NZD": 198.6113,
+             
+            "PTE": 22095.8338,
+             
+            "SEK": 941.625,
+             
+            "SGD": 200.3137,
+             
+            "THB": 5218.7513,
+             
+            "TWD": 3916.6675,
+             
+            "USD": 125,
+             
+            "ZAR": 605.25
+             
+            }
+            }
+            
+            <br>
+            <br>
+
+            
+            
+            Endpoint 1 -(Historical data section)
+            Sample request:
+            https://v6.exchangerate-api.com/v6/a5b67ad6f55df4c2f3afcfeb/history/USD/2004/11/2
+            Sample response:
+            {
+             "result": "success",
+             "documentation": "https://www.exchangerate-api.com/docs",
+             "terms_of_use": "https://www.exchangerate-api.com/terms",
+             "year": 2004,
+             "month": 11,
+             "day": 2,
+             "base_code": "USD",
+             "conversion_rates": {
+             
+            "AUD": 1.3428,
+             
+            "BRL": 2.8435,
+             
+            "CAD": 1.2263,
+             
+            "CHF": 1.2075,
+             
+            "CNY": 8.2764,
+             
+            "DKK": 5.8523,
+             
+            "EUR": 0.7872,
+             
+            "GBP": 0.5439,
+             
+            "HKD": 7.7815,
+             
+            "INR": 45.4,
+             
+            "JPY": 106.29,
+             
+            "KRW": 1115,
+             
+            "LKR": 104.37,
+             
+            "MXN": 11.481,
+             
+            "MYR": 3.8,
+             
+            "NOK": 6.4443,
+             
+            "NZD": 1.4605,
+             
+            "SGD": 1.6675,
+             
+            "SKW": 1115,
+             
+            "THB": 41.07,
+             
+            "TWD": 33.48,
+             
+            "USD": 1,
+             
+            "ZAR": 6.18
+             
+            }
+            }
+            
+            <br>
+            <br>
+            <br>
+            
+            
+            -Extra Info: 
+            It is important to understand what the currency exchange API can bring to the table 
+            before you look at it. You might think that there isn’t much data being pulled with this 
+            API. Although not much data is being pulled it is a very convenient API for a couple 
+            reasons. It could help solve many questions people might think about when leaving 
+            their home country to go on vacation or even to move. This could be extremely 
+            helpful for those who like to plan trips ahead and make sure they have the right 
+            amount of money to take with them (exchange). This API could be very useful on 
+            historical sites for old data for students studying economics and just general 
+            information. This API could be common for connecting to airport linked websites so it 
+            could be convenient for people to check when booking a trip out of the country. The 
+            API does have a key and requires a membership to access them if the free trial runs 
+            out. Every month the requests refill from 30,000. Other than that, accessing the API 
+            is self-explanatory
 
 
 
