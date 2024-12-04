@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Exchange Rates</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Historical Exchange Rates</h1>
+        <input type="date" id="datePicker" class="form-control">
+        <button onclick="fetchHistory()" class="btn btn-primary mt-3">Get Rates</button>
+        <div id="historicalRates"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
