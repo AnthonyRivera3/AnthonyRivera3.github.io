@@ -41,7 +41,7 @@
         async function fetchHistory() {
 
             try {
-                const response = await fetch('https://v6.exchangerate-api.com/v6/a5b67ad6f55df4c2f3afcfeb/latest/USD');
+                const response = await fetch('https://v6.exchangerate-api.com/v6/a5b67ad6f55df4c2f3afcfeb/history/USD/MONTH/DAY/YEAR');
                 currency = await response.json();
                 console.log(currency);
 
